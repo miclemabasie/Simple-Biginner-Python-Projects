@@ -2,10 +2,10 @@ suffixes = {'0': 'th', '1': 'st', '2':'nd', '3':'rd', '4':'th', '5':'th', '7':'n
 
 def ordinal_suffix(n):
     # convert the number n into a string
-    string_number = str(n)
+    n_string = str(n)
     # get the last digit in the string in a case the the number is more than 1 integer
-    last_digit = string_number[-1]
-    if n in [11, 12, 13]:
+    last_digit = n_string[-1]
+    if n_string.endswith('11') or n_string.endswith("12") or n_string.endswith('13'):
         valid_suffix = 'th'
     else:
         # get the suffix from the dictionary by matching
@@ -16,7 +16,7 @@ def ordinal_suffix(n):
                 valid_suffix = suffix
                 break
     # append the suffix to the original string
-    final_string = string_number+valid_suffix
+    final_string = n_string+valid_suffix
     return final_string
 
 
