@@ -1,3 +1,5 @@
+from main import *
+
 assert mode([]) == None
 assert mode([1, 2, 3, 4, 4]) == 4
 assert mode([1, 1, 2, 3, 4]) == 1
