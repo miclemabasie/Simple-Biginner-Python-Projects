@@ -2,6 +2,8 @@ import string
 import random
 
 def generatePassword(password_length):
+    if password_length < 12:
+        password_length = 12
     LOWER_LETTER = string.ascii_lowercase
     UPPER_LETTER = string.ascii_uppercase
     NUMBER = string.digits
